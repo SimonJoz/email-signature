@@ -1,0 +1,181 @@
+  @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: normal;
+        src: url(./fonts/Lato-Regular.ttf);
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        display: block;
+        font-size: 1rem;
+    }
+
+
+    .container {
+        padding: 10px;
+        display: -ms-inline-grid;
+        display: inline-grid;
+        grid: auto / -webkit-min-content -webkit-min-content auto;
+        grid: auto / min-content min-content auto;
+        -webkit-column-gap: 2rem;
+        -moz-column-gap: 2rem;
+        column-gap: 2rem;
+        grid-template-areas: "socials avatar contact";
+        
+        
+    }
+    
+
+    .socials {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border-radius: 3px;
+        grid-area: socials;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background-color: purple;
+        background-size: cover;
+        background-position: center;
+        background-image: url(./img/bg2.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .socials a {
+        color: #fff;
+        display: block;
+        font-size: 1.2em;
+        border-radius: 5px;
+        -webkit-transition: 0.8s;
+        transition: 0.8s;
+        padding: 20px 20px;
+    }
+
+    .socials a:hover {
+        border-radius: 50%;
+        -webkit-transform: scale(0.9) perspective(100);
+        transform: scale(0.9) perspective(100);
+        background-color: rgb(255, 255, 255, 0.3);
+    }
+
+    .socials img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .avatar-img-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    .avatar-border {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 133px;
+        height: 133px;
+        border-radius: 50%;
+        border: 1px solid rgb(83, 83, 83);
+        background-color: #e056fd;
+        background-image: linear-gradient(315deg, #e056fd 0%, #000000 74%);
+    }
+
+    .avatar {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+        width: 150px;
+        position: relative;
+        grid-area: avatar;
+    }
+
+    .avatar img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .contact {
+        -ms-grid-row: 1;
+        -ms-grid-column: 5;
+        padding: 0 20px;
+        color: #000;
+        font-family: Lato;
+        grid-area: contact;
+        background-size: cover;
+        background-position: center;
+        background-image: url(./img/bg1.png);
+        background-repeat: no-repeat;
+    }
+
+    .contact .name {
+        margin: 40px 0.5em 0.1em;
+        font-size: 1.4em;
+    }
+
+    .contact .job-titile {
+        margin-top: 0.1em;
+        margin-left: 2.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .contact .phone {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 1em;
+    }
+
+    .contact .email {
+        color: #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .contact .email:hover span {
+        text-decoration: underline;
+        color: rgb(253, 253, 253);
+    }
+
+    .contact img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
